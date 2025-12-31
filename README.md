@@ -1,6 +1,6 @@
 # whereisme
 
-![screenshot of the coordinates, timestamp, and link](image.png)
+![screenshot of the coordinates, timestamp, and link](example.png)
 
 a simple python server whose only job is to show a location and timestamp on a webpage
 
