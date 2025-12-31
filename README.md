@@ -32,8 +32,9 @@ clone the repo and `cd` into it
 
 make an `.env` file like:
 
-```
+```sh
 GPS_POST_TOKEN="XaEnzCdD9a4CUWKwCRp7eEdwp7NT9tow7xNPm4QxtMeMM2iEhWNJfNp2P7gtaLzD"
+# this is an example token, do not use!
 LOCAL_TZ="Etc/UTC"
 ```
 
@@ -61,14 +62,16 @@ python server.py
 
 to set the location on the site:
 
-```
+```sh
 curl -X POST -H "Content-Type: application/json" \
     -H "Authorization: Bearer XaEnzCdD9a4CUWKwCRp7eEdwp7NT9tow7xNPm4QxtMeMM2iEhWNJfNp2P7gtaLzD" \
     -d '{"latitude":"12.345", "longitude": "98.765"}' \
     http://127.0.0.1:13856/
 ```
 
-to see the location visit http://127.0.0.1:13856/
+again, that is an example token, replace with your own
+
+to see the location visit http://127.0.0.1:13856
 
 ### publishing on web
 
