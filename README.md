@@ -1,6 +1,5 @@
 # whereisme
 
-![screenshot of the coordinates, timestamp, and link](example.png)
 
 a simple python server whose only job is to show a location and timestamp on a webpage
 
@@ -9,6 +8,8 @@ the page shows:
 1. latitude, longitude
 1. timestamp of last update in human readable format
 1. link to the given coordinates on openstreetmap
+
+![screenshot of the coordinates, timestamp, and link](example.png)
 
 the server listens for POST requests with an auth token and updates the page accordingly
 
