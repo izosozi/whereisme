@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>where is</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/main.css') }}">
+</head>
+
+<body>
+<div class="content">
+    {% if not_found %}
+    <p>No entries found</p>
+    {% else %}
+    <p class="coords">{{ coords }}</p>
+    <p class="timestamp">{{ timestamp }}</p>
+    <p><a class="osm-url" href="{{ osm_url }}">View map</a></p>
+    {% endif %}
+</div>
+</body>
+
+</html>

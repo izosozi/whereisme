@@ -1,0 +1,39 @@
+:root {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    background-color: #1c130b;
+    color: #efc3a3;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: min(1.5em, calc(0.5em + 2vw));
+}
+
+a {
+    color: #7dd0df;
+    text-decoration: none;
+}
+
+.osm-url:hover {
+    background-color: #462f1b;
+    padding: 0.2em;
+    border-radius: 5%;
+}
+
+p {
+    text-align: center;
+}
+
+.content {
+    height: fit-content;
+    width: fit-content;
+}

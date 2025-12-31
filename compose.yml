@@ -1,0 +1,7 @@
+services:
+  whereisme:
+    build: .
+    container_name: whereisme
+    ports:
+      - 13856:13856
+    env_file: ".env"
