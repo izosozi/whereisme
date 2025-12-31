@@ -1,8 +1,31 @@
 # whereisme
 
-a simple Python server whose only job is to show a location and timestamp on a webpage
+![screenshot of the coordinates, timestamp, and link](image.png)
 
-## Install
+a simple python server whose only job is to show a location and timestamp on a webpage
+
+the page shows:
+
+1. latitude, longitude
+1. timestamp of last update in human readable format
+1. link to the given coordinates on openstreetmap
+
+the server listens for POST requests with an auth token and updates the page accordingly
+
+only the most recent location is stored in memory; no data persists across runs
+
+## what to use it for
+
+- alternative to find my; use ios shortcuts or tasker or something to periodically update your phone's location
+- keep track of where you parked your car or bike
+- broadcast the location of your parade float
+- play a sophisticated version of hide and seek that involves telling everyone where you're hiding
+- tell a child that this website shows you where santa/the easter bunny/jerma985 is, they will believe you
+- conduct a treasure hunt with only one treasure at a time
+- get directions except without turn-by-turn steps or seeing your current location
+- show off your two favorite words or phrases, along with a timestamp, and a link that won't work since it expects coordinates
+
+## install
 
 clone the repo and `cd` into it
 
@@ -48,7 +71,7 @@ to see the location visit http://127.0.0.1:13856/
 
 ### publishing on web
 
-none of this has been thoroughly tested for security vulnerabilities, so if you make this public facing at any level it is at yr own risk!
+none of this has been thoroughly tested for security vulnerabilities, so if you make this public facing at any level it is at yr own risk! and always use HTTPS and strong authentication methods!
 
 example caddy config:
 
@@ -58,7 +81,7 @@ your.website.abc {
 }
 ```
 
-with a userrname and password to view the site:
+with a username and password to view the site:
 
 ```Caddyfile
 your.website.abc {
@@ -78,3 +101,7 @@ use `caddy hash-password` for that one
 ## configuration
 
 aside from the .env file you're gonna have to just edit the repo to make changes my dude sorry... if u want to change something like the port just make sure it's reflected in server.py, compose.yml, Dockerfile, and anywhere else it's relevant
+
+## development
+
+ideally `start-dev.sh` should get the debug server running, but it prob won't at the moment, so adapt it for yr needs
